@@ -4,16 +4,17 @@
     <application
         android:label="HDMI Launcher"
         android:icon="@mipmap/ic_launcher">
-        <activity
-            android:name=".MainActivity"
-            android:label="HDMI Launcher"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.HOME" />
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
+    <activity
+        android:name=".MainActivity"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:theme="@android:style/Theme.NoDisplay"
+        android:exported="true">
+        <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.HOME" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+    </activity>
     </application>
 </manifest>
