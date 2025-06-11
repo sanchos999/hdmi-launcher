@@ -12,14 +12,15 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Показываем пустой layout (важно для HOME activity)
-        setContentView(new LinearLayout(this));
+        // Пустой чёрный layout (UI должен быть!):
+        LinearLayout ll = new LinearLayout(this);
+        ll.setBackgroundColor(0xFF000000);
+        setContentView(ll);
 
-        // Стартуем сервис через небольшую задержку (или сразу)
+        // Запуск сервиса через 1 секунду
         new Handler().postDelayed(() -> {
             Log.d("HDMITEST", "MainActivity: запускаю HdmiSwitcherService");
             startService(new Intent(this, HdmiSwitcherService.class));
-            // НЕ вызываем finish()!
-        }, 500);
+        }, 1000);
     }
 }
