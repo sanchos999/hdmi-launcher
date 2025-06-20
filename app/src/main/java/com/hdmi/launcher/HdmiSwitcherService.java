@@ -18,7 +18,7 @@ public class HdmiSwitcherService extends Service {
             } catch (Exception e) {
                 Log.e("HDMITEST", "Ошибка при эмуляции keyevent: " + Log.getStackTraceString(e));
             }
-            stopSelf();
+            stopSelf(startId);
         }).start();
 
         // Не пересоздавать сервис
